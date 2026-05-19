@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportyStyle | Tienda Deportiva</title>
+    
+    <!-- 1. Estilos -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SportyStyle</div>
+            <div id="auth-buttons">
+                <span id="user-welcome"></span>
+                <button id="btn-login">Iniciar Sesión</button>
+                <button id="btn-logout" class="hidden">Cerrar Sesión</button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="app-content">
+        <!-- Catálogo de Productos -->
+        <section id="catalog">
+            <h2>Nuestros Productos</h2>
+            <div class="products-grid" id="products-container">
+                <!-- Los productos se cargan dinámicamente desde app.js -->
+            </div>
+        </section>
+
+        <!-- Carrito y Pago -->
+        <aside id="checkout-section">
+            <div id="cart">
+                <h3>Tu Carrito</h3>
+                <ul id="cart-items">
+                    <!-- Los productos del carrito se cargan aquí -->
+                </ul>
+                <p><strong>Total: $<span id="cart-total">0</span></strong></p>
+            </div>
+
+            <!-- Formulario de Pago (se muestra solo si hay productos) -->
+            <form id="payment-form" class="hidden">
+                <h3>Datos de Envío</h3>
+                <input type="text" id="full-name" placeholder="Nombre completo" required>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="tel" id="phone" placeholder="Teléfono (9 dígitos)" pattern="[0-9]{9,12}" required>
+                <input type="text" id="address" placeholder="Dirección de envío" required>
+                <button type="submit" id="btn-buy">Finalizar Compra</button>
+            </form>
+        </aside>
+    </main>
+
+    <!-- Pantalla de Confirmación (oculta por defecto) -->
+    <div id="confirmation-screen" class="hidden">
+        <div class="confirmation-card">
+            <h2>¡Gracias por tu compra!</h2>
+            <div id="order-details"></div>
+            <button onclick="location.reload()">Volver a la tienda</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
