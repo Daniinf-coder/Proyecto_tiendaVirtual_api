@@ -1,0 +1,96 @@
+{
+	"info": {
+		"name": "API Proyecto_tiendaVirtual - Clientes",
+		"schema": "https://getpostman.com"
+	},
+	"item": [
+		{
+			"name": "Obtener Todos los Clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/clientes",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["api", "clientes"]
+				}
+			}
+		},
+		{
+			"name": "Crear Nuevo Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"María López\",\n  \"email\": \"maria@email.com\",\n  \"telefono\": \"+56987654321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/clientes",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["api", "clientes"]
+				}
+			}
+		},
+		{
+			"name": "Obtener Cliente por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/clientes/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["api", "clientes", "1"]
+				}
+			}
+		},
+		{
+			"name": "Actualizar Cliente por ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"María López Concha\",\n  \"email\": \"maria.lopez@email.com\",\n  \"telefono\": \"+56999999999\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/clientes/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["api", "clientes", "1"]
+				}
+			}
+		},
+		{
+			"name": "Eliminar Cliente por ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/clientes/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["api", "clientes", "1"]
+				}
+			}
+		}
+	]
+}
